@@ -20,7 +20,7 @@
  * Translators: DG3GSP, DL4LEX
  *
  *
- * Rev: 4.0
+ * Rev: 4.2
  */
 #ifndef USER_INTERFACE_LANGUAGES_GERMAN_H_
 #define USER_INTERFACE_LANGUAGES_GERMAN_H_
@@ -158,7 +158,7 @@ const stringsTable_t germanLanguage =
 .normal                                 = "Normal", // Maxlen 16 (with : + audio_prompt)
 .beep					= "Töne", // Maxlen 16 (with : + audio_prompt)
 .voice_prompt_level_1					= "Stimme L1", // Maxlen 16 (with : + audio_prompt)
-.transmitTalkerAlias	= "TA Tx", // Maxlen 16 (with : + .on or .off)
+.transmitTalkerAlias	= "TAlias senden", // Maxlen 16 (with : + .on or .off)
 .squelch_VHF			= "VHF Squelch",// Maxlen 16 (with : + XX%)
 .squelch_220			= "220 Squelch",// Maxlen 16 (with : + XX%)
 .squelch_UHF			= "UHF Squelch", // Maxlen 16 (with : + XX%)
@@ -172,7 +172,20 @@ const stringsTable_t germanLanguage =
 .voice_prompt_level_3	= "Stimme L3", // Maxlen 16 (with : + audio_prompt)
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dmr_ts_filter			= "TS Filter" // MaxLen: 12 (with ':' + settings: .on or .off)
+.dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
+.dtmf_contact_list			= "DTMF Kontakte", // Maxlen: 16
+.channel_power				= "Ch Leist.", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
+.channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
+.set_quickkey				= "Quickkey belegen", // MaxLen: 16
+.dual_watch				= "Dual Watch", // MaxLen: 16
+.info					= "Infoleiste", // MaxLen: 16 (with ':' + .off or.ts or .pwr or .both)
+.pwr					= "Leistung",
+.user_power				= "User Power",
+.temperature				= "Temperatur", // MaxLen: 16 (with ':' + .celcius or .fahrenheit)
+.celcius				= "°C",
+.seconds				= "sekunden",
+.radio_info				= "Radio Infos",
+.temperature_calibration		= "Temp Cal"
 };
 /********************************************************************
  *

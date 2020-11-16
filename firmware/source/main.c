@@ -166,6 +166,7 @@ void mainTask(void *data)
 	int function_event;
 	uiEvent_t ev = { .buttons = 0, .keys = NO_KEYCODE, .rotary = 0, .function = 0, .events = NO_EVENT, .hasEvent = false, .time = 0 };
 	bool keyOrButtonChanged = false;
+	bool wasRestoringDefaultsettings = false;
 
 	USB_DeviceApplicationInit();
 
@@ -181,10 +182,14 @@ void mainTask(void *data)
 
 	if (buttons & BUTTON_SK2)
 	{
+		wasRestoringDefaultsettings = true;
 		settingsRestoreDefaultSettings();
+		settingsLoadSettings();
 	}
-
-	settingsLoadSettings();
+	else
+	{
+		wasRestoringDefaultsettings = settingsLoadSettings();
+	}
 
 	displayInit(nonVolatileSettings.displayInverseVideo);
 
@@ -270,6 +275,11 @@ void mainTask(void *data)
 	dmrIDCacheInit();
 	voicePromptsCacheInit();
 
+	if (wasRestoringDefaultsettings)
+	{
+		enableVoicePromptsIfLoaded();
+	}
+
 	// Should be initialized before the splash screen, as we don't want melodies when VOX is enabled
 	voxSetParameters(nonVolatileSettings.voxThreshold, nonVolatileSettings.voxTailUnits);
 
@@ -308,6 +318,10 @@ void mainTask(void *data)
 	keys.key = 0;
 
 	lowbatteryTimer = fw_millis() + 5000;// Check battery 5 seconds after the firmware starts
+
+#if !defined(PLATFORM_GD77S)
+	wasRestoringDefaultsettings = false;
+#endif
 
 	while (1U)
 	{
@@ -594,6 +608,11 @@ void mainTask(void *data)
 								acceptPrivateCall(menuUtilityReceivedPcId);
 								menuSystemPopPreviousMenu();
 							}
+							else if ((menuSystemGetCurrentMenuNumber() == MENU_CONTACT_LIST_SUBMENU) && menuContactListIsDTMFSequenceKeying())
+							{
+								menuContactListDTMFSequenceReset();
+							}
+
 							menuSystemPushNewMenu(UI_TX_SCREEN);
 						}
 					}
@@ -743,7 +762,7 @@ void mainTask(void *data)
 			menuSystemCallCurrentMenuTick(&ev);
 
 			// Beep sounds aren't allowed in these modes.
-			if (((nonVolatileSettings.audioPromptMode == AUDIO_PROMPT_MODE_SILENT) || voicePromptIsActive) /*|| (nonVolatileSettings.audioPromptMode == AUDIO_PROMPT_MODE_VOICE)*/)
+			if (((nonVolatileSettings.audioPromptMode == AUDIO_PROMPT_MODE_SILENT) || voicePromptsIsPlaying()) /*|| (nonVolatileSettings.audioPromptMode == AUDIO_PROMPT_MODE_VOICE)*/)
 			{
 				if (melody_play != NULL)
 				{

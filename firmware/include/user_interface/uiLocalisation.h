@@ -15,13 +15,13 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
-#ifndef _UI_LOCALISATION_H_
-#define _UI_LOCALISATION_H_
+#ifndef _OPENGD77_UILOCALISATION_H_
+#define _OPENGD77_UILOCALISATION_H_
 
-#define NUM_LANGUAGES 12
+#define NUM_LANGUAGES 15
 #define LANGUAGE_TEXTS_LENGTH 17
 
-typedef struct stringsTable
+typedef struct
 {
 /*
  * IMPORTANT
@@ -177,8 +177,40 @@ typedef struct stringsTable
    const char *dmr_filter;
    const char *dmr_cc_filter;
    const char *dmr_ts_filter;
+   const char *dtmf_contact_list;// Menu number 18
+   const char *channel_power;// "Ch Power" for the Channel details screen
+   const char *channel_power_from_master;// "Master" for the power setting on the Channel details screen
+   const char *set_quickkey;
+   const char *dual_watch;
+   const char *info;
+   const char *pwr;
+   const char *user_power;
+   const char *temperature;
+   const char *celcius;
+   const char *seconds;
+   const char *radio_info;
+   const char *temperature_calibration;
 } stringsTable_t;
 
 extern const stringsTable_t languages[];
 extern const stringsTable_t *currentLanguage;
+
+enum languageNamesOrder  { 	englishLanguageName = 0,
+							catalanLanguageName,
+							danishLanguageName,
+							frenchLanguageName,
+							deutschGermanLanguageName,
+							italianLanguageName,
+							portuguesLanguageName,
+							spanishLanguageName,
+							suomiFinnishLanguageName,
+							polishLanguageName,
+							turkishLanguageName,
+							czechLanguageName,
+							nederlandsDutchLanguageName,
+							slovenianLanguageName,
+							portuguesBrazilLanguageName};
+
+extern const int LANGUAGE_DISPLAY_ORDER[];
+
 #endif

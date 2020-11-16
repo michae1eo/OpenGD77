@@ -20,7 +20,7 @@
  * Translators: OK2HAD
  *
  *
- * Rev: 4.0
+ * Rev: 4.1
  */
 #ifndef USER_INTERFACE_LANGUAGES_CZECH_H_
 #define USER_INTERFACE_LANGUAGES_CZECH_H_
@@ -56,8 +56,8 @@ const stringsTable_t czechLanguage =
 .zones					= "ZÛny", // MaxLen: 16
 .keypad					= "Kl·vesa", // MaxLen: 12 (with .ptt)
 .ptt					= "PTT", // MaxLen: 12 (with .keypad)
-.locked					= "ZamËen˝", // MaxLen: 15
-.press_blue_plus_star	= "StlaËit ModrÈ + *", // MaxLen: 19
+.locked					= "ZamÄen˝", // MaxLen: 15
+.press_blue_plus_star	= "StlaÄit ModrÈ + *", // MaxLen: 19
 .to_unlock				= "Odemknout", // MaxLen: 19
 .unlocked				= "Odemknuto", // MaxLen: 15
 .power_off				= "VypÌnanÌ...", // MaxLen: 16
@@ -158,7 +158,7 @@ const stringsTable_t czechLanguage =
 .normal                                 = "Norm·l", // Maxlen 16 (with : + audio_prompt)
 .beep					= "PÌp·", // Maxlen 16 (with : + audio_prompt)
 .voice_prompt_level_1					= "Hlas-1", // Maxlen 16 (with : + audio_prompt)
-.transmitTalkerAlias	= "TA Tx", // Maxlen 16 (with : + .on or .off)
+.transmitTalkerAlias	= "VysÌlat TA", // Maxlen 16 (with : + .on or .off)
 .squelch_VHF			= "VHF Squelch",// Maxlen 16 (with : + XX%)
 .squelch_220			= "220 Squelch",// Maxlen 16 (with : + XX%)
 .squelch_UHF			= "UHF Squelch", // Maxlen 16 (with : + XX%)
@@ -172,7 +172,20 @@ const stringsTable_t czechLanguage =
 .voice_prompt_level_3	= "Hlas-3", // Maxlen 16 (with : + audio_prompt)
 .dmr_filter				= "DMR Filtr",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filtr", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dmr_ts_filter			= "TS Filtr" // MaxLen: 12 (with ':' + settings: .on or .off)
+.dmr_ts_filter			= "TS Filtr", // MaxLen: 12 (with ':' + settings: .on or .off)
+.dtmf_contact_list			= "DTMF list", // Maxlen: 16
+.channel_power				= "V˝konKan·l", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
+.channel_power_from_master	= "RuÄnù",// Displayed if per-channel power is not enabled  the .channel_power
+.set_quickkey				= "Nast.ModrÈ + 1-9", // MaxLen: 16
+.dual_watch				= "Dual Watch", // MaxLen: 16
+.info					= "Info", // MaxLen: 16 (with ':' + .off or.ts or .pwr or .both)
+.pwr					= "V˝kon",
+.user_power				= "Uûiv.V˝kon",
+.temperature				= "Temperature", // MaxLen: 16 (with ':' + .celcius or .fahrenheit)
+.celcius				= "∞C",
+.seconds				= "seconds",
+.radio_info				= "Radio infos",
+.temperature_calibration		= "Temp Cal"
 };
 /********************************************************************
  *
