@@ -49,7 +49,7 @@ const stringsTable_t catalanLanguage=
 .channel_details		= "Detalls Canal",
 .language				= "Idioma",
 .new_contact			= "Nou contacte",
-.contact_list			= "Contactes",
+.dmr_contacts				= "DMR contacts", // MaxLen: 16
 .hotspot_mode			= "Mode Hotspot",
 .contact_details		= "Detall Ctte",
 .built					= "Compilat",
@@ -105,7 +105,7 @@ const stringsTable_t catalanLanguage=
 .rx_group				= "RX Grup",
 .on						= "Sí",
 .timeout_beep			= "Avís T.O.T.",
-.factory_reset			= "Reinici fabr.",
+.UNUSED_1				= "",
 .calibration			= "Calibració",
 .band_limits			= "Límit bandes",
 .beep_volume			= "Volum tons",
@@ -173,7 +173,7 @@ const stringsTable_t catalanLanguage=
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
 .dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dtmf_contact_list			= "DTMF list", // Maxlen: 16
+.dtmf_contact_list			= "FM DTMF contacts", // Maxlen: 16
 .channel_power				= "Ch Power", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
 .channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
 .set_quickkey				= "Set Quickkey", // MaxLen: 16
@@ -188,7 +188,8 @@ const stringsTable_t catalanLanguage=
 .temperature_calibration		= "Temp Cal",
 .pin_code				= "Pin Code",
 .please_confirm				= "Please confirm", // MaxLen: 15
-.scanning				= "Scanning"
+.vfo_freq_bind_mode			= "Freq. Bind",
+.overwrite_qm				= "Overwrite ?" //Maxlen: 14 chars
 };
 /********************************************************************
  *

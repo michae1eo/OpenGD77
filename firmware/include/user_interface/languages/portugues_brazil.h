@@ -49,7 +49,7 @@ const stringsTable_t portuguesBrazilLanguage =
 .channel_details		= "Detalhes Canal",
 .language				= "Idioma",
 .new_contact			= "Novo contato",
-.contact_list			= "Lista contatos",
+.dmr_contacts				= "DMR contacts", // MaxLen: 16
 .contact_details		= "Detalhe contato",
 .hotspot_mode			= "Modo Hotspot",
 .built					= "Compilado",
@@ -105,7 +105,7 @@ const stringsTable_t portuguesBrazilLanguage =
 .rx_group				= "Rx Grp",
 .on						= "On",
 .timeout_beep			= "Bip timeout",
-.factory_reset			= "RESET",
+.UNUSED_1				= "",
 .calibration			= "Ajustes",
 .band_limits			= "Limite banda",
 .beep_volume			= "Volume bip",
@@ -173,7 +173,7 @@ const stringsTable_t portuguesBrazilLanguage =
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
 .dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dtmf_contact_list			= "Lista DTMF", // Maxlen: 16
+.dtmf_contact_list			= "FM DTMF contacts", // Maxlen: 16
 .channel_power				= "Ch Power", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
 .channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
 .set_quickkey				= "Set Quickkey", // MaxLen: 16
@@ -188,7 +188,8 @@ const stringsTable_t portuguesBrazilLanguage =
 .temperature_calibration		= "Temp Cal",
 .pin_code				= "Pin Code",
 .please_confirm				= "Please confirm", // MaxLen: 15
-.scanning				= "Scanning"
+.vfo_freq_bind_mode			= "Freq. Bind",
+.overwrite_qm				= "Overwrite ?" //Maxlen: 14 chars
 };
 /*********************************************************************
  *

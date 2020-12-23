@@ -47,7 +47,7 @@ typedef struct
    const char *channel_details;// Menu number  12
    const char *language;// Menu number  13
    const char *new_contact;// Menu number  14
-   const char *contact_list;// Menu number  15
+   const char *dmr_contacts;// Menu number  15
    const char *contact_details;// Menu number 16
    const char *hotspot_mode;// Menu number 17
 
@@ -109,7 +109,7 @@ typedef struct
    const char *rx_group;
    const char *on;
    const char *timeout_beep;
-   const char *factory_reset;
+   const char *UNUSED_1;
    const char *calibration;
    const char *band_limits;
    const char *beep_volume;
@@ -192,7 +192,8 @@ typedef struct
    const char *temperature_calibration;
    const char *pin_code;
    const char *please_confirm;
-   const char *scanning;
+   const char *vfo_freq_bind_mode;
+   const char *overwrite_qm;
 } stringsTable_t;
 
 extern const stringsTable_t languages[];

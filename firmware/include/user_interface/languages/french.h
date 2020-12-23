@@ -49,7 +49,7 @@ const stringsTable_t frenchLanguage =
 .channel_details			= "Détails canal",
 .language				= "Langue",
 .new_contact				= "Nouv. contact",
-.contact_list				= "Liste contacts",
+.dmr_contacts				= "Contacts DMR", // MaxLen: 16
 .contact_details			= "Détails contact",
 .hotspot_mode				= "Hotspot",
 .built					= "Créé",
@@ -105,7 +105,7 @@ const stringsTable_t frenchLanguage =
 .rx_group				= "Grp Rx",
 .on					= "On",
 .timeout_beep				= "Son timeout",
-.factory_reset				= "Ràz Usine",
+.UNUSED_1				= "",
 .calibration				= "Étalonnage",
 .band_limits				= "Lim. Bandes",
 .beep_volume				= "Vol. bip",
@@ -173,7 +173,7 @@ const stringsTable_t frenchLanguage =
 .dmr_filter				= "Filtre DMR",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter				= "Filtre CC", // MaxLen: 12 (with ':' + settings: .on or .off)
 .dmr_ts_filter				= "Filtre TS", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dtmf_contact_list			= "Liste DTMF", // Maxlen: 16
+.dtmf_contact_list			= "Contacts DTMF FM", // Maxlen: 16
 .channel_power				= "Pce Canal", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
 .channel_power_from_master		= "Maître",// Displayed if per-channel power is not enabled  the .channel_power
 .set_quickkey				= "Défini Quickkey", // MaxLen: 16
@@ -188,7 +188,8 @@ const stringsTable_t frenchLanguage =
 .temperature_calibration		= "Etal. t°",
 .pin_code				= "Code Pin",
 .please_confirm				= "Confirmez", // MaxLen: 15
-.scanning				= "Scanning"
+.vfo_freq_bind_mode			= "Freq. Liées",
+.overwrite_qm				= "Écraser ?" //Maxlen: 14 chars
 };
 /********************************************************************
  *

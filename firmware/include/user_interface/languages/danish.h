@@ -49,7 +49,7 @@ const stringsTable_t danishLanguage =
 .channel_details		= "Kanal detaljer",
 .language				= "Sprog",
 .new_contact			= "Ny Kontakt",
-.contact_list			= "Kontakt liste",
+.dmr_contacts				= "DMR contacts", // MaxLen: 16
 .hotspot_mode			= "Hotspot mode",
 .contact_details		= "Kontakt Detaljer",
 .built					= "Version",
@@ -105,7 +105,7 @@ const stringsTable_t danishLanguage =
 .rx_group				= "Rx Grp",
 .on						= "On",
 .timeout_beep			= "Timeout bip",
-.factory_reset			= "Fabriksinst",
+.UNUSED_1				= "",
 .calibration			= "Justering",
 .band_limits			= "Åben FRQ",
 .beep_volume			= "Bip vol",
@@ -173,7 +173,7 @@ const stringsTable_t danishLanguage =
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
 .dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dtmf_contact_list			= "DTMF liste", // Maxlen: 16
+.dtmf_contact_list			= "FM DTMF contacts", // Maxlen: 16
 .channel_power				= "Ch Power", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
 .channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
 .set_quickkey				= "Set Quickkey", // MaxLen: 16
@@ -188,7 +188,8 @@ const stringsTable_t danishLanguage =
 .temperature_calibration		= "Temp Cal",
 .pin_code				= "Pin Code",
 .please_confirm				= "Please confirm", // MaxLen: 15
-.scanning				= "Scanning"
+.vfo_freq_bind_mode			= "Freq. Bind",
+.overwrite_qm				= "Overwrite ?" //Maxlen: 14 chars
 };
 /********************************************************************
  *

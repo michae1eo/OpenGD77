@@ -20,7 +20,7 @@
  * Translators: DG3GSP, DL4LEX
  *
  *
- * Rev: 4.2
+ * Rev: 4.3
  */
 #ifndef USER_INTERFACE_LANGUAGES_GERMAN_H_
 #define USER_INTERFACE_LANGUAGES_GERMAN_H_
@@ -49,7 +49,7 @@ const stringsTable_t germanLanguage =
 .channel_details		= "Kanal Details", // MaxLen: 16
 .language				= "Sprache", // MaxLen: 16
 .new_contact			= "Neuer Kontakt", // MaxLen: 16
-.contact_list			= "Kontaktliste", // MaxLen: 16
+.dmr_contacts				= "DMR Kontakte", // MaxLen: 16
 .hotspot_mode			= "Hotspot", // MaxLen: 16
 .contact_details		= "Kontakt Details", // MaxLen: 16
 .built					= "Erstellt", // MaxLen: 16
@@ -100,12 +100,12 @@ const stringsTable_t germanLanguage =
 .off					= "Aus", // MaxLen: 16 (with ':' + .timeout_beep, .calibration or .band_limits)
 .zone_skip				= "Skip Zone", // MaxLen: 16 (with ':' + .yes or .no) 
 .all_skip				= "Skip Alle", // MaxLen: 16 (with ':' + .yes or .no)
-.yes					= "Ja", // MaxLen: 16 (with ':' + .zone_skip, .all_skip or .factory_reset)
-.no						= "Nein", // MaxLen: 16 (with ':' + .zone_skip, .all_skip or .factory_reset)
+.yes					= "Ja", // MaxLen: 16 (with ':' + .zone_skip, .all_skip)
+.no						= "Nein", // MaxLen: 16 (with ':' + .zone_skip, .all_skip)
 .rx_group				= "Rx Gruppe", // MaxLen: 16 (with ':' and codeplug group name)
 .on						= "Ein", // MaxLen: 16 (with ':' + .calibration or .band_limits)
 .timeout_beep			= "Timeout-Ton", // MaxLen: 16 (with ':' + .off or 5..20)
-.factory_reset			= "Werks-Reset", // MaxLen: 16 (with ':' + .yes or .no)
+.UNUSED_1				= "",
 .calibration			= "Kalibration", // MaxLen: 16 (with ':' + .on or .off)
 .band_limits			= "Band Limit", // MaxLen: 16 (with ':' + .on or .off)
 .beep_volume			= "Beep Lauts", // MaxLen: 16 (with ':' + -24..6 + 'dB')
@@ -173,7 +173,7 @@ const stringsTable_t germanLanguage =
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
 .dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dtmf_contact_list			= "DTMF Kontakte", // Maxlen: 16
+.dtmf_contact_list			= "FM DTMF Kontakte", // Maxlen: 16
 .channel_power				= "Ch Leist.", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
 .channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
 .set_quickkey				= "Quickkey belegen", // MaxLen: 16
@@ -187,8 +187,9 @@ const stringsTable_t germanLanguage =
 .radio_info				= "Radio Infos",
 .temperature_calibration		= "Temp Cal",
 .pin_code				= "Pin Code",
-.please_confirm				= "Please confirm", // MaxLen: 15
-.scanning				= "Scanning"
+.please_confirm				= "Bitte bestätigen", // MaxLen: 15
+.vfo_freq_bind_mode			= "Freq. Bind",
+.overwrite_qm				= "Überschreiben?" //Maxlen: 14 chars
 };
 /********************************************************************
  *
