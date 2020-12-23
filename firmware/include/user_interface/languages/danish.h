@@ -172,7 +172,10 @@ const stringsTable_t danishLanguage =
 .voice_prompt_level_3	= "Voice L3", // Maxlen 16 (with : + audio_prompt)
 .dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
 .dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dmr_ts_filter			= "TS Filter" // MaxLen: 12 (with ':' + settings: .on or .off)
+.dmr_ts_filter			= "TS Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
+.dtmf_contact_list			= "DTMF liste", // Maxlen: 16
+.channel_power				= "Ch Power", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
+.channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_powerrr
 };
 /********************************************************************
  *

@@ -170,9 +170,12 @@ const stringsTable_t spanishLanguage =
 .gitCommit				= "Git commit",
 .voice_prompt_level_2	= "Voz L2", // Maxlen 16 (with : + audio_prompt)
 .voice_prompt_level_3	= "Voz L3", // Maxlen 16 (with : + audio_prompt)
-.dmr_filter				= "DMR Filter",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
-.dmr_cc_filter			= "CC Filter", // MaxLen: 12 (with ':' + settings: .on or .off)
-.dmr_ts_filter			= "TS Filter" // MaxLen: 12 (with ':' + settings: .on or .off)
+.dmr_filter				= "Filtro DMR",// MaxLen: 12 (with ':' + settings: "TG" or "Ct" or "RxG")
+.dmr_cc_filter			= "Filtro CC", // MaxLen: 12 (with ':' + settings: .on or .off)
+.dmr_ts_filter			= "Filtro TS", // MaxLen: 12 (with ':' + settings: .on or .off)
+.dtmf_contact_list			= "Lista DTMF", // Maxlen: 16
+.channel_power				= "Ch Power", //Displayed as "Ch Power:" + .channel_power_from_master or "Ch Power:"+ power text e.g. "Power:500mW" . Max total length 16
+.channel_power_from_master	= "Master",// Displayed if per-channel power is not enabled  the .channel_power
 };
 /********************************************************************
  *
